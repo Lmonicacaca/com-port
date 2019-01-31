@@ -1,9 +1,11 @@
 package com.example.port.filter;
 
+import com.example.port.interceptor.BodyReaderHttpServletRequestWrapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
@@ -21,6 +23,8 @@ public class MyFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-
+        HttpServletRequest request = (HttpServletRequest)servletRequest;
+        ServletRequest requestWrapper = new BodyReaderHttpServletRequestWrapper(request);
+        filterChain.doFilter(requestWrapper,servletResponse);
     }
 }

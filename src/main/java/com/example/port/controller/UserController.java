@@ -23,7 +23,7 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserService userService;
-    @RequestMapping(value = "/getUser",method = RequestMethod.POST)
+    @RequestMapping(value = "/getUser",method = RequestMethod.GET)
     @ApiOperation(value = "获取用户详情")
     public ResponseModel<UserDO> getUser(){
         ResponseModel responseModel = new ResponseModel();
