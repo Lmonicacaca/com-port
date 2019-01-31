@@ -1,2 +1,28 @@
 server:
   port: 9999
+
+mapper:
+  mappers: com.example.port.common.dao.TkMapper
+  not-empty: false
+  identity: MYSQL
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  type-aliases-package: com.example.port.domain.DO
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.40.245:3306/security?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+    username: admin
+    password: MyNewPASS5!
+  redis:
+    database: 0
+    host: 192.168.40.245
+    port: 6379
