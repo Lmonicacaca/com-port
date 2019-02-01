@@ -9,8 +9,9 @@ import java.io.*;
 import java.nio.charset.Charset;
 
 /**
- * @author lwt
- * @date 2019/1/25 20:16
+ * @author lilin
+ * @date 2019-01-31
+ * 该类是为了解决request请求的流只能读取一次，将request中的流读取出来复制到一个字节数组里，将该请求放到过滤器可以实现多次读取请求流
  */
 public class BodyReaderHttpServletRequestWrapper extends HttpServletRequestWrapper {
 

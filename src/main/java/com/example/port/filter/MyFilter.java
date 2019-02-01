@@ -24,6 +24,7 @@ public class MyFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest)servletRequest;
+        // 使用自定义的请求类，将请求流读取后复制一份到对象的body中，解决request请求流只能读取一次的问题
         ServletRequest requestWrapper = new BodyReaderHttpServletRequestWrapper(request);
         filterChain.doFilter(requestWrapper,servletResponse);
     }

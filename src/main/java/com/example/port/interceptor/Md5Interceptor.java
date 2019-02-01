@@ -29,6 +29,7 @@ public class Md5Interceptor implements HandlerInterceptor {
                 return true;
             }
             String md5 = request.getHeader("token");
+            //这里的getInputStream是读取的过滤器重新封装的请求对象中的body，解决了request对象的getInputStream只能读取一次的问题。
             String body = IOUtils.toString(request.getInputStream(),"UTF-8");
             String md5Encode = MD5Utils.MD5Encode(body, SaltEnum.MD5_SALT.getCode());
             if(md5.equals(md5Encode)){
