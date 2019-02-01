@@ -1,6 +1,6 @@
 package com.example.port.config;
 
-import com.example.port.filter.MyFilter;
+import com.example.port.filter.Md5Filter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +17,7 @@ public class FilterConfig {
     @Bean
     public FilterRegistrationBean getChannelFilterRegistrationBean(){
         FilterRegistrationBean<Filter> bean = new FilterRegistrationBean<>();
-        bean.setFilter(new MyFilter());
+        bean.setFilter(new Md5Filter());
         bean.addUrlPatterns("/*");
         bean.setName("MyFilter");
         bean.setOrder(10);
