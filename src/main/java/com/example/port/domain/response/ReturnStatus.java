@@ -6,7 +6,8 @@ package com.example.port.domain.response;
  */
 public enum  ReturnStatus {
     SUCCESS("200"),
-    FAILED("500");
+    FAILED("500"),
+    NOT_LOGIN("501");
     private String code;
     ReturnStatus(String code){
         this.code = code ;

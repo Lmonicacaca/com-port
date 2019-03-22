@@ -1,5 +1,6 @@
 package com.example.port.service;
 
+import com.example.port.common.exception.UnityException;
 import com.example.port.domain.DO.UserDO;
 
 import java.util.List;
@@ -9,5 +10,5 @@ import java.util.List;
  * @date 2019-01-31
  */
 public interface UserService {
-    public List<UserDO> queryAllUser();
+    List<UserDO> queryAllUser();
 }

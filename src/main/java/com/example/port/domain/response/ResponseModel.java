@@ -14,4 +14,10 @@ import lombok.ToString;
 public class ResponseModel<T> {
     private String code = ReturnStatus.FAILED.getCode();
     private T data;
+    public ResponseModel(){
+
+    }
+    public ResponseModel(String code){
+        this.code = code;
+    }
 }

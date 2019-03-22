@@ -1,7 +1,10 @@
 package com.example.port.service.impl;
 
+import com.example.port.common.exception.NoLoginException;
+import com.example.port.common.exception.UnityException;
 import com.example.port.dao.UserDao;
 import com.example.port.domain.DO.UserDO;
+import com.example.port.domain.response.ReturnStatus;
 import com.example.port.service.UserService;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +21,9 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
     @Override
     public List<UserDO> queryAllUser() {
+        if(true){
+            throw new NoLoginException(ReturnStatus.NOT_LOGIN);
+        }
         return userDao.queryAllUser();
     }
 }

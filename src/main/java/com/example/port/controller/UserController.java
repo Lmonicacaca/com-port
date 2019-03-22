@@ -5,6 +5,7 @@ package com.example.port.controller;
  * @date 2019-01-31
  */
 
+import com.example.port.common.exception.UnityException;
 import com.example.port.domain.DO.UserDO;
 import com.example.port.domain.response.ResponseModel;
 import com.example.port.service.UserService;
@@ -25,7 +26,7 @@ public class UserController {
     private UserService userService;
     @RequestMapping(value = "/getUser",method = RequestMethod.GET)
     @ApiOperation(value = "获取用户详情")
-    public ResponseModel<UserDO> getUser(){
+    public ResponseModel<UserDO> getUser() {
         ResponseModel responseModel = new ResponseModel();
         List<UserDO> userDOS = userService.queryAllUser();
         if(userDOS != null){
