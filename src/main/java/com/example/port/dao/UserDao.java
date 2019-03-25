@@ -3,6 +3,7 @@ package com.example.port.dao;
 import com.example.port.common.dao.TkMapper;
 import com.example.port.domain.DO.UserDO;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

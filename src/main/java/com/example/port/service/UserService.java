@@ -1,6 +1,7 @@
 package com.example.port.service;
 
 import com.example.port.common.exception.UnityException;
+import com.example.port.dao.UserDao;
 import com.example.port.domain.DO.UserDO;
 
 import java.util.List;
@@ -11,4 +12,6 @@ import java.util.List;
  */
 public interface UserService {
     List<UserDO> queryAllUser();
+
+    UserDO getUserDao(UserDO user);
 }
