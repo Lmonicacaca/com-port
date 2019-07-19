@@ -19,10 +19,21 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.40.245:3306/security?useUnicode=true&characterEncoding=utf8&autoReconnect=true
-    username: admin
-    password: MyNewPASS5!
-  redis:
-    database: 0
-    host: 192.168.40.245
-    port: 6379
+    url: jdbc:mysql://10.50.2.244:3306/bigdata-web?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+    username: dbapp
+    password: 1qazCDE#5tgb
+  application:
+    name: com-port
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9911/eureka/
+  should-use-dns: false
+  instance:
+    prefer-ip-address: true  #显示实例的IP配置
+    instance-id: ${spring.application.name}:${server.port}
+#  redis:
+#    database: 0
+#    host: 192.168.40.245
+#    port: 6379
