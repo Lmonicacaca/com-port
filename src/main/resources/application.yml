@@ -29,10 +29,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:9911/eureka/
-  should-use-dns: false
-  instance:
-    prefer-ip-address: true  #显示实例的IP配置
-    instance-id: ${spring.application.name}:${server.port}
 #  redis:
 #    database: 0
 #    host: 192.168.40.245
