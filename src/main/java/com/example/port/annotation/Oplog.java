@@ -6,4 +6,13 @@ import java.lang.annotation.*;
 @Target(ElementType.METHOD)
 @Documented
 public @interface Oplog {
+    String module() default ""; //操作模块
+
+    String describe() default ""; //描述
+
+    String message() default ""; //消息
+
+    String op_Type() default ""; //操作类型
+
+    boolean op_result() default true;//操作结果
 }
