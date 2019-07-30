@@ -28,7 +28,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:9911/eureka/
+      defaultZone: http://localhost:9911/eureka/, http://localhost:9912/eureka/
   should-use-dns: false
   instance:
     prefer-ip-address: true  #显示实例的IP配置
