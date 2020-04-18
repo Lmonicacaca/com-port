@@ -7,8 +7,5 @@ import org.springframework.stereotype.Service;
 public class TestServiceImpl implements TestService {
     @Override
     public void testJvm() {
-        while (true){
-            Object o = new Object();
-        }
     }
 }

@@ -19,9 +19,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://10.50.2.244:3306/bigdata-web?useUnicode=true&characterEncoding=utf8&autoReconnect=true
-    username: dbapp
-    password: 1qazCDE#5tgb
+    url: jdbc:mysql://192.168.7.104:3306/qqsk?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+    username: jiebai
+    password: 123456
   application:
     name: com-port
 

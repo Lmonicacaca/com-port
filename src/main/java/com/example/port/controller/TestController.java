@@ -8,6 +8,7 @@ import com.example.port.domain.response.TestResponseModel;
 import com.example.port.service.TestService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @RequestMapping("/test")
 @Api(value = "测试类")
+@Slf4j
 public class TestController {
 
     @Autowired
@@ -28,9 +30,10 @@ public class TestController {
     @ResponseBody
     @RequestMapping(value = "/testController")
     public String testController(){
+        log.info("进入");
         ResponseModel responseModel = new ResponseModel();
         testService.testJvm();
-        return JSONObject.toJSONString(responseModel);
+        return "9999";
     }
 
     @RequestMapping(value = "/hello")
